@@ -36,7 +36,8 @@ export default function Search() {
         
        try{
           const response= await axios.request(options);
-          { console.log(response.data); }
+          { setMovie(response.data.results);
+            console.log(response.data); }
         } catch (error) {
             console.error(error);
           }
@@ -68,7 +69,7 @@ export default function Search() {
                 Submit
             </button>
         </form>
-      {/* <Cards movie={movie} url={{url}.url}/> */}
+      <Cards movie={movie} />
         </> 
     )
     }

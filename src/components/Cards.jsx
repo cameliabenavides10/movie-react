@@ -3,34 +3,38 @@ import { useState } from 'react';
 
 
 
-export default function Cards({ movie, url }) {
+export default function Cards({ movie }) {
 
 
-    console.log(url);
+    console.log(movie);
     return (
         <>
-            {/* {movie.map(movie => {
+            {movie.map(movie => {
                 return (
                     <div key={movie.id} className="d-inline-flex picture-cards m-2 picture-cards" >
 
-                        <div >
+                       
 
                             <div className="mb-4">
-                                {movie.originalTitleText.text}
+                                <h4> {movie.original_title}</h4>
+                                <img src={`https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`}
+                                class="img-fluid" 
+                                alt="Responsive image" 
+                                style={{ height: "270px", width: "300px" }} />
                             </div>
                         </div>
-                    </div>
+                  
                 )
 
             }
-            )} */}
-            {url.map((url) => {
+            )}
+            {/* {url.map((url) => {
                 return (
                     <>
                         {url && url.url ?
                             (<div className='container'> 
                                 <div className="row d-inline-flex picture-cards m-2 picture-cards"> 
-                            <img src={url.url}
+                            <img src=https://api.themoviedb.org/3/discover/movie?include_adult=true&include_video=true&language=en-US&page=1&sort_by=popularity.desc{movie.backdrop_path}
 
                                 class="img-fluid" alt="Responsive image" style={{ height: "270px", width: "300px" }} /> 
                           <div className="row">      
@@ -44,7 +48,7 @@ export default function Cards({ movie, url }) {
                     </>
                 )
             }
-            )}
+            )} */}
 
 
 
