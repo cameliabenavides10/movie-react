@@ -13,17 +13,20 @@ export default function Cards({ movie }) {
                 return (
                     <div key={movie.id} className="d-inline-flex picture-cards m-2 picture-cards" >
 
-                       
 
-                            <div className="mb-4">
-                                <h4> {movie.original_title}</h4>
-                                <img src={`https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`}
-                                class="img-fluid" 
-                                alt="Responsive image" 
-                                style={{ height: "270px", width: "300px" }} />
-                            </div>
+                        <div className='container'>
+
+                            <p style={{height:"50px"}}
+                            className=" row mb-4"> {movie.original_title}</p>
+                            <img
+                                className='row mb-4'
+                                src={`https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`}
+                                class="img-fluid"
+                                alt="Responsive image"
+                               />
+
                         </div>
-                  
+                    </div>
                 )
 
             }

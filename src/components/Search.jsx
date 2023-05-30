@@ -27,7 +27,7 @@ export default function Search() {
 
         const options = {
           method: 'GET',
-          url: 'https://api.themoviedb.org/3/discover/movie?include_adult=true&include_video=true&language=en-US&page=1&sort_by=popularity.desc',
+          url: 'https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=true&language=en&page=1&sort_by=popularity.desc',
           headers: {
             accept: 'application/json',
             Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3NDhlMzMxZGM4NmI3MjlhZmI0ZjVmNzYzYThkNjRmNiIsInN1YiI6IjY0NzY3MDM1MjU1ZGJhMDEwODQxMDkwNSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.Vg_NToRT58vYoUWqG25XsMzVKEJINL0GmLdiO6P5C1w'
