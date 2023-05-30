@@ -7,21 +7,20 @@ import Cards from './Cards';
 
 
 export default function Search() {
-    // our rerendering search term letters
-    const [movieSearch, setMovieSearch] = useState('');
-    console.log(movieSearch);
-    // the rerendering title which is used in the fetching 
-    const [movieTitle, setMovieTitle] = useState('');
-    // movie data variable
-    const [movie, setMovie] = useState([])
+    // // our rerendering search term letters
+    // const [movieSearch, setMovieSearch] = useState('');
+    // console.log(movieSearch);
+    // // the rerendering title which is used in the fetching 
+    // const [movieTitle, setMovieTitle] = useState('');
+    // // movie data variable
+    const [popularMovie, setPopularMovie] = useState([])
 
     // setting the movie title function 
     function handleSubmit(e) {
         e.preventDefault();
-        setMovieTitle(movieSearch);
-        setMovieSearch('');
+    
     }
-    console.log(movieTitle);
+    
     // using axios to fetch movie api data
     const getMovie = async () => {
 
@@ -36,7 +35,7 @@ export default function Search() {
         
        try{
           const response= await axios.request(options);
-          { setMovie(response.data.results);
+          { setPopularMovie(response.data.results);
             console.log(response.data); }
         } catch (error) {
             console.error(error);
@@ -52,24 +51,24 @@ export default function Search() {
             type="submit"
             onSubmit={handleSubmit}>
             <div class="form-group mb-3 w-25 p-3 mx-auto">
-                <label for="exampleInputEmail1">Search Movie Titles</label>
-                <input
+                <label for="exampleInputEmail1">Need Suggestions?</label>
+                {/* <input
                     value={movieSearch}
                     onChange={(e) => setMovieSearch(e.target.value)}
                     type="text"
                     label="exampleInputEmail1"
                     class="form-control"
                     placeholder="Enter Movie Title"
-                />
+                /> */}
             </div>
             <button
                 onClick={getMovie}
                 type="submit"
                 class="btn btn-primary">
-                Submit
+                Yes!
             </button>
         </form>
-      <Cards movie={movie} />
+      <Cards movie={popularMovie} />
         </> 
     )
     }

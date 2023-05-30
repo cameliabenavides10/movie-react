@@ -13,7 +13,7 @@ export default function Navbar (){
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
       <a class="nav-item nav-link active" href="/">Home </a>
-      <a class="nav-item nav-link" href="/features">Features</a>
+      <a class="nav-item nav-link" href="/popular">Popular</a>
     </div>
   </div>
 </nav>
